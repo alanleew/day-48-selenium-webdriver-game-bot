@@ -19,7 +19,7 @@ names = [event.find_element(By.TAG_NAME, "a").text for event in li]
 #     dict[i] = {'time': times[i],'name': names[i]}
 # print(dict)
 
-dict_comp = {i:{'time': times[i],'name': names[i]} for i in range(0,len(times))}
+dict_comp = {i:{'time': times[i],'name': names[i]} for i in range(len(times))}
 print(dict_comp)
 
 # driver.close()
