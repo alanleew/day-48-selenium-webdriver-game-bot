@@ -14,10 +14,11 @@ times = [event.find_element(By.TAG_NAME, "time").text for event in li]
 names = [event.find_element(By.TAG_NAME, "a").text for event in li]
 
 # This does the same as the code below. Just wanted to practice dictionary comprehension.
-# dict = {}
-# for i in range(0,len(times)):
-#     dict[i] = {'time': times[i],'name': names[i]}
-# print(dict)
+dict = {}
+for i in range(len(times)):
+    dict[i] = {'time': times[i],
+               'name': names[i]}
+print(dict)
 
 dict_comp = {i:{'time': times[i],'name': names[i]} for i in range(len(times))}
 print(dict_comp)
